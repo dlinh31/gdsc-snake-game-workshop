@@ -1,0 +1,123 @@
+### STEP 1 ->  Setup screen ###
+
+main.py:
+    - add screen attribute and complete setup in game controller class
+
+### STEP 2 -> Make Snake body ###
+
+snake.py:
+    - add visual setup and position attribute to Segment class init method
+    - add head attribute to Snake class init method
+    - add segments attribute to snake class init method (1 head +  2 segments)
+    - add previous tail coordinate attribute to snake class init method 
+
+main.py:
+    - create instance of snake inside Gamecontroller class init methood
+
+### STEP 3 -> moving Snake forward ###
+
+snake.py:
+    - Complete get_position and change_position Segment methods
+    - Complete move forward Head method
+    - Complete move forward Snake method
+
+main.py:
+    - Add attribute to hold game state
+    - Add to game loop method that moves snake forward while game not Over
+    - Add tracer(0) to screen and include sleep, update in game loop method
+
+### STEP 4 -> turning left and right ###
+
+snake.py:
+    - Complete turn left and turn right methods in Head
+    - Complete turn left and turn right methods in Snake
+
+main.py:
+    - Add screen listener to screen attribute in Game Controller
+    - add onkeypress that turns snake left on 'Left' key press
+    - add onkeypress that turns snake right on 'Right' key press
+        
+### STEP 5 -> Create Food ###
+
+food.py:
+    - Add visual attributes in Food init method 
+    - Complete move around method
+    - Call move around mehtod in init method
+
+main.py:
+    - Create an instance oof food class inside the Gamecontroller class init method
+
+### STEP 6 -> detect snake food collissions ###
+
+snake.py:
+    - Complete get distance method in Head
+    - Complete detect collission food method in Snake (recommend use distance <= 15)
+
+main.py:
+    - Add conditional statement to handle collision with food, if fullfilled move food move_around
+    - Add handle collission wit food to the end of the game loop method 
+
+
+### STEP 7 -> Eat food if collission ###
+
+snake.py: 
+    - complete eat food method that increases size of snake body
+    - call eat food method inside detect collission food method only if conditional statement is True
+
+### STEP 8 -> Create Scoreboard  ###
+
+scoreboard.py;
+    - add basic visual setup and score attribute to Scoreboard class
+    - complete write_score method (which should clear itself before writing score)
+    - call write score method in init method 
+
+main.py;
+    - cerate an instance of scoreboaord inside the Gamecontroller class init method
+
+
+### STEP 9 -> Increment socre when eating food ###
+
+scoreboaord.py:
+    - Complete increment score method in Scoreboard class (shold increase score and rewrite it )
+
+main.py;
+    - Add increment score in case of collission with food inside the hadnel collission food method of GameController class
+
+
+### STEP 10 -> check for collisionos with wall ###
+
+snake.py: 
+    - Complete echeck collission with wall method in Head class
+    - Complete echeck collission with wall method in Snake class
+
+main.py :
+    - add conditional statement to game over method for collission with wall if so change game state attribute
+    - call game over method at the end of the game loop 
+
+# STEP 11 -> Collisions with self 
+
+snake.py:
+    -  Complete detect collission with self method in Snake class
+
+main.py; 
+    - add detect collission with self to the conditionoal statement in game over method 
+
+### STEP 12 -> GAME OVER screen ###
+
+scoreboard.py:
+    - Complete write_game_over method 
+
+main.py;
+    - if conditional statement in game over is true call the scoreboard's write game over method 
+
+### STEP 13 -> Reset functionality ###
+
+snake.py:
+    - Complete the reset method in the snake class
+
+scoreboard.py:
+    - Complete reset method in scorebaord class
+
+main.py:
+    - Complete reset method in Game Controller class
+    - Add a keypress listener to game over mehtod (if game has ended) that calls reset method when activated
