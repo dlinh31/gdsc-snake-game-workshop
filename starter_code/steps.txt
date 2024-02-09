@@ -1,3 +1,5 @@
+---------MILESTONE 1---------
+
 ### STEP 1 ->  Setup screen ###
 
 main.py:
@@ -26,23 +28,28 @@ main.py:
     - Add to game loop method that moves snake forward while game not Over
     - Add tracer(0) to screen and include sleep, update in game loop method
 
+---------MILESTONE 2---------
+
 ### STEP 4 -> turning left and right ###
 
 snake.py:
-    - Complete turn left and turn right methods in Head
+    - Add heading attribute to segment class
+    - Complete turn left, right, up down methods in Head
     - Complete turn left and turn right methods in Snake
 
 main.py:
     - Add screen listener to screen attribute in Game Controller
     - add onkeypress that turns snake left on 'Left' key press
     - add onkeypress that turns snake right on 'Right' key press
+
+---------MILESTONE 3---------
         
 ### STEP 5 -> Create Food ###
 
 food.py:
     - Add visual attributes in Food init method 
     - Complete move around method
-    - Call move around mehtod in init method
+    - Call move around method in init method
 
 main.py:
     - Create an instance oof food class inside the Gamecontroller class init method
@@ -64,27 +71,9 @@ snake.py:
     - complete eat food method that increases size of snake body
     - call eat food method inside detect collission food method only if conditional statement is True
 
-### STEP 8 -> Create Scoreboard  ###
+---------MILESTONE 4---------
 
-scoreboard.py;
-    - add basic visual setup and score attribute to Scoreboard class
-    - complete write_score method (which should clear itself before writing score)
-    - call write score method in init method 
-
-main.py;
-    - cerate an instance of scoreboaord inside the Gamecontroller class init method
-
-
-### STEP 9 -> Increment socre when eating food ###
-
-scoreboaord.py:
-    - Complete increment score method in Scoreboard class (shold increase score and rewrite it )
-
-main.py;
-    - Add increment score in case of collission with food inside the hadnel collission food method of GameController class
-
-
-### STEP 10 -> check for collisionos with wall ###
+### STEP 8 -> check for collisionos with wall ###
 
 snake.py: 
     - Complete echeck collission with wall method in Head class
@@ -101,6 +90,31 @@ snake.py:
 
 main.py; 
     - add detect collission with self to the conditionoal statement in game over method 
+
+
+---------MILESTONE 5--------- --> optional milestone
+
+### STEP 8 -> Create Scoreboard  ###
+
+scoreboard.py;
+    - add basic visual setup and score attribute to Scoreboard class
+    - complete write_score method (which should clear itself before writing score)
+    - call write score method in init method 
+
+main.py;
+    - cerate an instance of scoreboaord inside the Gamecontroller class init method
+
+
+### STEP 9 -> Increment socre when eating food ###
+
+scoreboaord.py:
+    - Complete increment score method in Scoreboard class (shold increase score and rewrite it )
+
+main.py:
+    - Add increment score in case of collission with food inside the hadnel collission food method of GameController class
+
+
+---------MILESTONE 6---------
 
 ### STEP 12 -> GAME OVER screen ###
 
